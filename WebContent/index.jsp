@@ -40,7 +40,8 @@ List<guestbookVo> list=dao.getList();
 			<td><a href="deleteform.jsp?no=<%=vo.getNo() %>">삭제</a></td>
 		</tr>
 		<tr>
-			<td colspan=4><%=vo.getIntroduction() %></td>
+			<td colspan=4>
+			<%=vo.getIntroduction().replaceAll("\n", "<br>") %></td>
 		</tr>
 	
 	</table>
